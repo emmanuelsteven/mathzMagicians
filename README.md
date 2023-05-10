@@ -133,7 +133,7 @@ To check for js errors run:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Mikey1-nuel**
+👤 **Emmanuel steven**
 
 - GitHub: [Githubhandle](https://github.com/emmanuelsteven)
 
