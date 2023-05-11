@@ -1,39 +1,57 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #c0c0c0;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.calApp {
+  font-family: "Poppins", sans-serif;
+  width: 60%;
+  margin: 1.2rem auto;
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.renderResult {
+  background-color: grey;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
-.App-link {
-  color: #61dafb;
+.result {
+  color: #fff;
+  text-align: end;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.inputs {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 0;
+}
 
-  to {
-    transform: rotate(360deg);
-  }
+.secondgrid {
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+input {
+  padding: 1.2rem  2.2rem;
+  outline: none;
+  border: 1px solid #a7a7a7;
+  background-color: #fbfbfb;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.mathSigns {
+  background-color: orange;
 }
