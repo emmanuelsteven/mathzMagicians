@@ -1,40 +1,69 @@
-const Buttons = () => (
-  <div className="calApp">
-    <div className="renderResult">
-      <div className="result">0</div>
-    </div>
-    <div className="calInputs">
-      <div className="inputs">
-        <input type="button" value="AC" />
-        <input type="button" value="+/-" />
-        <input type="button" value="%" />
-        <input type="button" className="mathSigns" value="/" />
-      </div>
-      <div className="inputs">
-        <input type="button" value="7" />
-        <input type="button" value="8" />
-        <input type="button" value="9" />
-        <input type="button" className="mathSigns" value="x" />
-      </div>
-      <div className="inputs">
-        <input type="button" value="4" />
-        <input type="button" value="5" />
-        <input type="button" value="6" />
-        <input type="button" className="mathSigns" value="-" />
-      </div>
-      <div className="inputs">
-        <input type="button" value="1" />
-        <input type="button" value="2" />
-        <input type="button" value="3" />
-        <input type="button" className="mathSigns" value="+" />
-      </div>
-      <div className="inputs secondgrid">
-        <input type="button" value="0" />
-        <input type="button" value="." />
-        <input type="button" className="mathSigns" value="=" />
-      </div>
-    </div>
-  </div>
-);
+import React, { useState, useEffect } from 'react';
+import calculate from '../logic/calculate';
 
+const Buttons = () => {
+  const [calc, setCalc] = useState({
+    total: 0,
+    next: '',
+    operation: '',
+  });
+
+  useEffect(() => {
+    const { total, next } = calc;
+    const output = document.querySelector('.result');
+    if (next !== null) {
+      output.value = next;
+    } else if (total !== null) {
+      output.value = total;
+    }
+  }, [calc]);
+
+  const handleClick = (event) => {
+    if (event.target.textContent === 'AC') {
+      const output = document.querySelector('.result');
+      output.value = 0;
+    }
+    const result = calculate(calc, event.target.textContent);
+    setCalc({ ...calc, ...result });
+  };
+
+  return (
+    <div className="calApp">
+      <div className="renderResult">
+        <input className="result" placeholder="0" dir="rtl" />
+      </div>
+      <div className="calInputs">
+        <div className="inputs">
+          <button type="button" onClick={handleClick}>AC</button>
+          <button type="button" onClick={handleClick}>+/-</button>
+          <button type="button" onClick={handleClick}>%</button>
+          <button type="button" className="mathSigns" onClick={handleClick}>/</button>
+        </div>
+        <div className="inputs">
+          <button type="button" onClick={handleClick}>7</button>
+          <button type="button" onClick={handleClick}>8</button>
+          <button type="button" onClick={handleClick}>9</button>
+          <button type="button" className="mathSigns" onClick={handleClick}>x</button>
+        </div>
+        <div className="inputs">
+          <button type="button" onClick={handleClick}>4</button>
+          <button type="button" onClick={handleClick}>5</button>
+          <button type="button" onClick={handleClick}>6</button>
+          <button type="button" className="mathSigns" onClick={handleClick}>-</button>
+        </div>
+        <div className="inputs">
+          <button type="button" onClick={handleClick}>1</button>
+          <button type="button" onClick={handleClick}>2</button>
+          <button type="button" onClick={handleClick}>3</button>
+          <button type="button" className="mathSigns" onClick={handleClick}>+</button>
+        </div>
+        <div className="inputs secondgrid">
+          <button type="button" onClick={handleClick}>0</button>
+          <button type="button" onClick={handleClick}>.</button>
+          <button type="button" className="mathSigns" onClick={handleClick}>=</button>
+        </div>
+      </div>
+    </div>
+  );
+};
 export default Buttons;
