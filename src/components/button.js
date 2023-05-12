@@ -37,7 +37,7 @@ const Buttons = () => {
           <button type="button" onClick={handleClick}>AC</button>
           <button type="button" onClick={handleClick}>+/-</button>
           <button type="button" onClick={handleClick}>%</button>
-          <button type="button" className="mathSigns" onClick={handleClick}>/</button>
+          <button type="button" className="mathSigns" onClick={handleClick}>÷</button>
         </div>
         <div className="inputs">
           <button type="button" onClick={handleClick}>7</button>
