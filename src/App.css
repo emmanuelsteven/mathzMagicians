@@ -58,3 +58,12 @@ button {
 .mathSigns {
   background-color: orange;
 }
+
+.calculatorText {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.calculatorCont {
+  margin-top: 20%;
+}
