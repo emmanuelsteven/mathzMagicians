@@ -1,6 +1,11 @@
 .quotesCont {
-  color: ivory;
-  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: crimson;
+  width: 100%;
+  height: 50vh;
   margin: 0 auto;
   font-weight: 400;
   font-size: 1.2rem;
@@ -18,4 +23,45 @@
 
 .qouteStyle {
   font-style: italic;
+}
+
+.navcont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-ul a {
+  justify-content: space-around;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nav-ul {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-ul a:hover {
+  color: aliceblue;
+}
+
+.navtitle {
+  font-variant: small-caps;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.homecont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Htitle {
+  margin: 1.2rem;
+  font-variant: small-caps;
+  font-size: 1.5rem;
 }
