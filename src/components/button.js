@@ -9,12 +9,16 @@ const Buttons = () => {
   });
 
   useEffect(() => {
-    const { total, next } = calc;
+    const { total, next, operation } = calc;
     const output = document.querySelector('.result');
     if (next !== null) {
       output.value = next;
-    } else if (total !== null) {
+    } else if(operation !== null) {
+      output.value = operation;
+    }else if (total !== null) {
       output.value = total;
+    }else {
+      output.value = '0';
     }
   }, [calc]);
 
