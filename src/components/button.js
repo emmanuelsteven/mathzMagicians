@@ -13,11 +13,11 @@ const Buttons = () => {
     const output = document.querySelector('.result');
     if (next !== null) {
       output.value = next;
-    } else if(operation !== null) {
+    } else if (operation !== null) {
       output.value = operation;
-    }else if (total !== null) {
+    } else if (total !== null) {
       output.value = total;
-    }else {
+    } else {
       output.value = '0';
     }
   }, [calc]);
