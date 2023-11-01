@@ -9,14 +9,18 @@
 body {
   background-color: #c0c0c0;
   overflow: hidden;
+  margin: 2rem;
+  padding: 2rem;
 }
 
 .calApp {
   font-family: "Poppins", sans-serif;
-  width: 100vw;
+
+  /* width: 100vw; */
   margin: 2rem auto;
   padding: 2rem;
-  height: 100vh;
+
+  /* height: 100vh; */
 }
 
 .renderResult {
@@ -67,5 +71,10 @@ button {
 }
 
 .calculatorCont {
-  margin-top: 20%;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
