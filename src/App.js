@@ -7,7 +7,7 @@ import Quotes from './components/fetchQuotes';
 
 function App() {
   return (
-    <div className="calApp">
+    <div className="calAp">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
